@@ -20,9 +20,9 @@ const Card = ({tours,removeTours}) => {
         <h4 className="font-naruto text-2xl font-bold p-1">{tours.name}</h4>
       </div>
       <div className="tour-desc">
-        {description}.....
+        {description}....
         <span className="read-more" onClick={handlertText}>
-          {moreless ? `Show less` : `Read More`}
+          {moreless ? `Show less` : ` Read More`}
         </span>
       </div>
     </div>

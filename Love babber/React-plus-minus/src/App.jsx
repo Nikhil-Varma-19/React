@@ -38,11 +38,11 @@ function App() {
   };
 
   const decrementHandler = () => {
-    setCount(count - 1);
+    setCount(prev => prev-1);
   };
 
   const incrementHandler = () => {
-    setCount(count + 1);
+    setCount(prev => prev+1);
   };
   return (
     <>
