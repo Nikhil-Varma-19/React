@@ -25,12 +25,9 @@ function App() {
       [name]: type === "checked" ? checked : value,
     }));
   }
-  function submithandler(event){
-  
-  console.log("Printing :")
-  console.log(fdata)
-  event.preventDefault()
-
+  function submithandler(event) {
+    console.log("Printing :",fdata);
+    event.preventDefault();
   }
   return (
     <>
@@ -119,8 +116,8 @@ function App() {
 
           <label htmlFor="zipcode">ZipCode/Postal Code</label>
           <input
-            type="text"
-            className="outline-none border-gray-300 rounded-md px-3 py-2 mt-1 mb-4"
+            type="number"
+            className="outline-none border-gray-300 rounded-md px-3 py-2 mt-1 mb-4 [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none"
             name="zipcode"
             id="zipcode"
             value={fdata.zipcode}
@@ -174,44 +171,42 @@ function App() {
             <p className="text-sm">Get notified</p>
           </fieldset>
 
-        
-         <fieldset className="flex flex-col justify-center items-center">
-  <div className="flex gap-3 items-center">
-    <input
-      type="radio"
-      name="pushNotified"
-      id="Everything"
-      value="Everything"
-      onChange={formdataHandler}
-    />
-    <label htmlFor="Everything">Everything</label>
-  </div>
-  <div className="flex gap-3 items-center">
-    <input
-      type="radio"
-      name="pushNotified"
-      id="Has you want"
-      value="Has you want"
-      onChange={formdataHandler}
-    />
-    <label htmlFor="Has you want">Has you want</label>
-  </div>
-  <div className="flex gap-3 items-center">
-    <input
-      type="radio"
-      name="pushNotified"
-      id="NO"
-      value="NO"
-      onChange={formdataHandler}
-    />
-    <label htmlFor="NO">NO</label>
-  </div>
-</fieldset>
+          <fieldset className="flex flex-col justify-center items-center">
+            <div className="flex gap-3 items-center">
+              <input
+                type="radio"
+                name="pushNotified"
+                id="Everything"
+                value="Everything"
+                onChange={formdataHandler}
+              />
+              <label htmlFor="Everything">Everything</label>
+            </div>
+            <div className="flex gap-3 items-center">
+              <input
+                type="radio"
+                name="pushNotified"
+                id="Has you want"
+                value="Has you want"
+                onChange={formdataHandler}
+              />
+              <label htmlFor="Has you want">Has you want</label>
+            </div>
+            <div className="flex gap-3 items-center">
+              <input
+                type="radio"
+                name="pushNotified"
+                id="NO"
+                value="NO"
+                onChange={formdataHandler}
+              />
+              <label htmlFor="NO">NO</label>
+            </div>
+          </fieldset>
 
-<button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-  Save
-</button>
-
+          <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+            Save
+          </button>
         </form>
       </div>
     </>

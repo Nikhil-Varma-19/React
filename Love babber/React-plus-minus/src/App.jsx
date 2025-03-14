@@ -23,7 +23,7 @@ function App() {
       if (e.key === "-") {
         setCount((prevCount) => prevCount - 1);
       }
-      if(e.key == "Backspace"){
+      if(e.key == "Backspace" || e.key == " "){
         setCount(resetHandler)
       }
     }

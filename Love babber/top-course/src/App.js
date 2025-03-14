@@ -8,7 +8,7 @@ import Spinner from "./components/Spinner";
 import { toast } from "react-toastify";
 
 
- 
+
 function App() {
   const [courses, setCourses] = useState(null)
   const [loading, setLoading] = useState(true)
@@ -24,8 +24,8 @@ function App() {
 
 
     } catch (error) {
-       toast.error("Something went wrong")
-      
+      toast.error("Something went wrong")
+
     }
     setLoading(false)
   }
@@ -33,20 +33,22 @@ function App() {
     fetchData()
   }, [])
   return (
-   <div className="min-h-screen flex flex-col bg-bgDark2">
+    <div className="min-h-screen flex flex-col bg-bgDark2">
       <div><Navbar></Navbar></div>
-     <div className="">
-     <div><Filter filterData={filterData}
-     category={category}
-     setCategory={setCategory}
-     >
-      </Filter></div>
-     <div className="w-11/12 max-w-[1200px] mx-auto items-center flex-wrap flex justify-center min-h-[50vh]"
-     >{loading ? (<Spinner/>) : (<Cards courses={courses}
-     category={category}
-     />)}</div>
-     </div>
-     </div>
+      <div className="">
+        <div>
+          <Filter filterData={filterData}
+          category={category}
+          setCategory={setCategory}
+        >
+        </Filter>
+        </div>
+        <div className="w-11/12 max-w-[1200px] mx-auto items-center flex-wrap flex justify-center min-h-[50vh]"
+        >{loading ? (<Spinner />) : (<Cards courses={courses}
+          category={category}
+        />)}</div>
+      </div>
+    </div>
   );
 }
 

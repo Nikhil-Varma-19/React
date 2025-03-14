@@ -21,7 +21,7 @@ const Card = ({tours,removeTours}) => {
       </div>
       <div className="tour-desc">
         {description}....
-        <span className="read-more" onClick={handlertText}>
+        <span className="read-more hover:cursor-pointer" onClick={handlertText}>
           {moreless ? `Show less` : ` Read More`}
         </span>
       </div>
